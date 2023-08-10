@@ -1,9 +1,8 @@
 #include <stdio.h>
 /**
- * Main - prints "with proper grammar, but the outcome
- *                is a piece of art," followed by a new line
+ * Main - prints "with proper grammar, but the outcome is a piece of art,"
  * Return: Always 0
- * main - uses printf function
+ * function main uses printf
  */
 int main(void)
 {
