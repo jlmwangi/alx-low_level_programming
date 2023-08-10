@@ -5,7 +5,7 @@
  *
  * Return value for main is 0 indicating success
  */
-int main(void) (entry point)
+int main(void)
 {
 	char str[] = "Programming is like running a multilingual puzzle";
 
