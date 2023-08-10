@@ -1,16 +1,12 @@
 #include <stdio.h>
-
 /**
- * main - this is the main function that marks the entry point
- *
- * Return value for main is 0 indicating success
+ * main - this program prints a string using puts
+ * Return: 0 indicating success
  */
 int main(void)
 {
-	char str[] = "Programming is like running a multilingual puzzle";
-
-	puts(str);
-
-	return (0);
+char str[] = "Programming is like running a multilingual puzzle";
+puts(str);
+return (0);
 }
 
