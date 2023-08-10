@@ -2,7 +2,7 @@
 /**
  * Main - prints "with proper grammar, but the outcome is a piece of art,"
  * Return: Always 0
- * function main uses printf
+ * function main(void) uses printf
  */
 int main(void)
 {
