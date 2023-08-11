@@ -23,5 +23,5 @@ int main(void)
 					{
 						printf("the last digit of n is %d and is less than 6 and not 0\n");
 					}
-				return (0);
+					return (0);
 }
