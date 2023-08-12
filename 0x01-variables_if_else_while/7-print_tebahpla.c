@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	int z
+	int z = 25;
 
 		for (z = 25; z >= 'a'; z--)
 		{
