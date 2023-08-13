@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- * Void- function main marks the entry point
- * Main - prints type sizes based on the computer it is compiled on
- * Return: Always 0
+ * main - prints type sizes based on the computer it is compiled on
+ *
+ * Return: 0(successful)
  */
 int main(void)
 {
