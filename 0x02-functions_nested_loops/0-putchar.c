@@ -6,10 +6,10 @@
  */
 int main(void)
 {
-	int 'ph';
+	int 'c';
 
 	{
-		putchar(ph);
+		putchar(c);
 		putchar('\n');
 	}
 	return (0);
