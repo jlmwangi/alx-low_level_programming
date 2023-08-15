@@ -4,11 +4,16 @@
  *
  * Return; 0(successful)
  */
-int main(void)
+void print_alphabet(void);
 {
 	for (int c = 'a'; c <= 'z'; c++)
 	{
 		putchar(c);
 	}
-	return (0);
+}
+int main(void)
+{
+	print_alphabet();
+	putchar('\n');
+	return 0;
 }
