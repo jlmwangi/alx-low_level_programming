@@ -6,11 +6,12 @@
  */
 int main(void)
 {
-	int ph = '_putchar';
+	int ph = 'putchar';
 
-	putchar(ph);
-	putchar('\n')
-
+	{
+		putchar(ph);
+		putchar('\n');
+	}
 	return (0);
 }
 
