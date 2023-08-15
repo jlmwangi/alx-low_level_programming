@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	int putchar = 'c'
+	int _putchar(char);
 	int (c);
 
 	{
