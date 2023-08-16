@@ -26,7 +26,7 @@ int add(int a, int b)
 				_putchar(b);
 			else
 				_putchar(0);
-		x = a + b;
+		x =$(a + b);
 			_putchar(x + '0');
 			_putchar('\n');
 		return (x);
