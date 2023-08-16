@@ -5,7 +5,7 @@
  * int: represents the integer
  * @n: presents the digit
  *
- * Return: 0(successful)
+ * Return: last digit
  */
 int print_last_digit(int n)
 {
@@ -14,7 +14,6 @@ int print_last_digit(int n)
 	}
 
 	{
-		return (n % 10 + '0');
+		return (n % 10);
 	}
-	return (0);
 }
