@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * print_line - prints a straight line in the terminal
- * @n: presents integer
+ * @n: number of times _ should be printed
  *
  */
 void print_line(int n)
@@ -13,9 +13,13 @@ void print_line(int n)
 
 	else
 	{
-		_putchar('_');
-	}
+		int i = 1;
 
+		while (i <= n)
+		{
+			_putchar('_');
+			i++;
+		}
 	_putchar('\n');
 	}
 }
