@@ -3,29 +3,30 @@
 /**
  * main - prints fizz and buzz
  *
+ * Fizz: characters to be printed
+ * Buzz: characters to be printed
+ * FizzBuzz: characters to be printed
+ *
  * Return: 0(successful)
  */
 int main(void)
 {
 	int i;
-	int a = "FizzBuzz";
-	int b = "Fizz";
-	int c = "Buzz";
 
 	for (i = 1; i <= 100; i++)
 	{
 		if (i % 5 == 0 && i % 3 == 0)
 		{
-			printf("%d", 'a');
+			printf("FizzBuzz");
 		}
 		else if (i % 3 == 0)
 		{
-			printf("%d", 'b');
+			printf("Fizz");
 		}
 
 		else if (i % 5 == 0)
 		{
-			printf("%d", 'c');
+			printf("Buzz");
 		}
 		else
 		{
@@ -34,10 +35,10 @@ int main(void)
 
 		if (i != 100)
 		{
-			_putchar(' ');
+			putchar(' ');
 		}
 	}
-	_putchar('\n');
+	putchar('\n');
 	return (0);
 }
 
