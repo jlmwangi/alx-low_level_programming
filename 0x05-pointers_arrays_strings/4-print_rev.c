@@ -17,7 +17,7 @@ void print_rev(char *s)
 	}
 
 	start = s;
-	finish = s + l - 1;
+	finish = s;
 	for (a = 0; a < l / 2; a++)
 	{
 		ch = *finish;
