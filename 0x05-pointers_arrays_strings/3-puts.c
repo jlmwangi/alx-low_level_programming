@@ -12,6 +12,7 @@ void _puts(char *str)
 	{
 		if (*str == '\n')
 		_putchar(*str);
+		str++;
 	}
 	_putchar('\n');
 }
