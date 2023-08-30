@@ -9,9 +9,15 @@ int _is_prime_number(int n)
 {
 	int i;
 
+       	i = 0;
+	if (i <= n)
+	{
+		i++;
+	}
 	if (n <= 1)
 	{
 		return (0);
+	}
 	if (i == 1)
 	{
 		return (1);
@@ -20,5 +26,5 @@ int _is_prime_number(int n)
 	{
 		return (0);
 	}
-	return (n, i - 1);
+	return (n);
 }
