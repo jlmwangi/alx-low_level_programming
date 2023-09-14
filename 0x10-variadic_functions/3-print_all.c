@@ -13,10 +13,6 @@ void print_all(const char * const format, ...)
 	va_start(x, format);
 	for (i = 0; format[i] != '\0'; i++)
 	{
-		if (i > 0)
-		{
-			printf(", ");
-		}
 		if (format[i] == 'c')
 		{
 			char c = va_arg(x, int);
