@@ -1,5 +1,7 @@
 #include <string.h>
 #include "lists.h"
+#include <stdlib.h>
+#include <stddef.h>
 /**
  * add_node_end - adds a new node at the end
  * @head: end of the new list
@@ -23,18 +25,17 @@ list_t *add_node_end(list_t **head, const char *str)
 	new->len = strlen(str);
 
 	new->next = NULL;
-	if (*head == NULL)
+	if (head == NULL)
 	{
 		*head = new;
 	}
 	else
 	{
-		list_t *current = *head;
-
-		while (current->next != NULL)
+		while (head->next != NULL)
 		{
-			current = current->next;
+			*head = new->next;
 		}
-		current->next = new;
+	}
+	head->next = new;
 	return (new);
 }
