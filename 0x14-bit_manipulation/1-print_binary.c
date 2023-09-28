@@ -8,10 +8,22 @@
 void print_binary(unsigned long int n)
 {
 	unsigned long int i;
+	int c;
+	int j;
 
-	for (i = 1 << 31; i > 0; i >>= 1)
+	c = sizeof(unsigned long int) * 8;
+
+	for (j = c - 1; j >= 0; j--)
 	{
-		(n & i) ? _putchar('1') : _putchar('0');
+		i = 1 << j;
+
+		if (n & i)
+		{
+			_putchar('1');
+		}
+		else
+		{
+			_putchar('0');
+		}
 	}
-	_putchar('\n');
 }
