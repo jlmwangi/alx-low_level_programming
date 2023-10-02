@@ -19,14 +19,12 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 	file_from = fopen(argv[1], "rb");
-
 	if (file_from == NULL)
 	{
 		dprintf("Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 	file_to = fopen(argv[2], "wb");
-
 	if (file_to == NULL)
 	{
 		dprintf("Error: Can't write to %s\n", argv[2]);
@@ -37,20 +35,17 @@ int main(int argc, char *argv[])
 		fwrite(buffer, 1, read, file_to);
 	}
 	fclose(file_from);
-
 	if (file_from != NULL)
 	{
 		dprintf("Error: Can't close fd %s\n", argv[1]);
 		exit(100);
 	}
 	fclose(file_to);
-
 	if (file_to != NULL)
 	{
 		dprintf("Error: Can't close fd %s\n", argv[2]);
 		exit(100);
 	}
 	chmod(argv[2], 0664);
-
 	return (0);
 }
