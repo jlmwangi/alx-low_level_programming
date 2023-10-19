@@ -23,6 +23,18 @@ if (fd == -1)
 perror("Error opening ELF file");
 return (INVALID_ELF);
 }
+if (read(fd, &header, sizeof(header)) != sizeof(header))
+{
+	perror("Error reading ELF header");
+	close(fd);
+	return (INVALID_ELF);
+}
+if (memcmp(header.e_ident, ELFMAG, SELFMAG) != 0)
+{
+	fprintf(stderr, "Error: Not valid\n");
+	close(fd);
+	return (INVALID_ELF);
+}
 if (lseek(fd, 0, SEEK_SET) == -1)
 {
 	perror("Error");
@@ -32,12 +44,6 @@ if (lseek(fd, 0, SEEK_SET) == -1)
 if (read(fd, &header, sizeof(header)) != sizeof(header))
 {
 perror("Error reading ELF header");
-close(fd);
-return (INVALID_ELF);
-}
-if (memcmp(header.e_ident, ELFMAG, SELFMAG) != 0)
-{
-fprintf(stderr, "Error: Not a valid ELF file\n");
 close(fd);
 return (INVALID_ELF);
 }
