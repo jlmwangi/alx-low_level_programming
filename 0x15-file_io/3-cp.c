@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 	const char *file_to = argv[2];
 	int fd_from, fd_to;
 	char buffer[1024];
-	ssize_t r;
+	ssize_t r, w;
 
 	if (argc != 3)
 	{
@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	fd_to = open(file_to, O_WRONLY | O_TRUNC, 0664);
+	fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0644);
 	if (fd_to == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
@@ -35,14 +35,18 @@ int main(int argc, char *argv[])
 	}
 	while ((r = read(fd_from, buffer, 1024)) > 0)
 	{
-		if (write(fd_to, buffer, r) != r)
+		w = write(fd_to, buffer, r);
+		if (w == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-			close(fd_from);
-			close(fd_to);
 			exit(99);
 		}
 
+	}
+	if (r == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
 	}
 	if (close(fd_from) == -1)
 	{
