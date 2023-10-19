@@ -41,12 +41,6 @@ if (lseek(fd, 0, SEEK_SET) == -1)
 	close(fd);
 	return (INVALID_ELF);
 }
-if (read(fd, &header, sizeof(header)) != sizeof(header))
-{
-perror("Error reading ELF header");
-close(fd);
-return (INVALID_ELF);
-}
 display_elf_header(&header);
 close(fd);
 return (0);
