@@ -11,19 +11,17 @@ void print_binary(unsigned long int n)
 	int c;
 	int j;
 
-	c = 0;
+	c = 1;
 
 	for (j = 63; j >= 0; j--)
 	{
-		i = n >> j;
-		if (i & 1)
+		i = 1UL << j;
+		if (n & i)
 		{
-			putchar('1');
-			c++;
+			c = 0;
+			_putchar('1');
 		}
-		else if (c)
-			putchar('0');
-		if (!c)
-			putchar('0');
+		else if (!c)
+			_putchar('0');
 	}
 }
