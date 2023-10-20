@@ -18,12 +18,12 @@ void print_binary(unsigned long int n)
 		i = n >> j;
 		if (i & 1)
 		{
-			_putchar('1');
+			putchar('1');
 			c++;
 		}
 		else if (c)
-			_putchar('0');
+			putchar('0');
 		if (!c)
-			_putchar('0');
+			putchar('0');
 	}
 }
