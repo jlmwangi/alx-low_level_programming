@@ -9,20 +9,19 @@ void print_binary(unsigned long int n)
 	int s;
 	unsigned long int j;
 
-	s = sizeof(unsigned int) * 8;
+	s = sizeof(unsigned long int) * 8;
 
 	if (n == 0)
 		_putchar('0');
 
 	for (i = s - 1; i >= 0; i--)
 	{
-		j = 1 << i;
+		j = 1UL << i;
 		if (n & j)
 		{
-			s = 0;
 			_putchar('1');
 		}
-		else if (!s)
+		else if (!n)
 			_putchar('0');
 	}
 }
