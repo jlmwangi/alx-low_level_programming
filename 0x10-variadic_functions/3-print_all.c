@@ -23,7 +23,7 @@ void print_all(const char * const format, ...)
 		{
 			int n = va_arg(x, int);
 
-			printf("%i", n);
+			printf("%d", n);
 		}
 		else if (format[i] == 'f')
 		{
