@@ -17,6 +17,12 @@ void print_binary(unsigned long int n)
 	for (i = s - 1; i >= 0; i--)
 	{
 		j = 1 << i;
-		_putchar((n & j) ? '1' : '0');
+		if (n & j)
+		{
+			s = 0;
+			_putchar('1');
+		}
+		else if (!s)
+			_putchar('0');
 	}
 }
