@@ -9,7 +9,7 @@ void print_binary(unsigned long int n)
 	int s;
 	unsigned long int j;
 
-	s = sizeof(unsigned long int) * 8;
+	s = sizeof(unsigned int) * 8;
 
 	if (n == 0)
 		_putchar('0');
