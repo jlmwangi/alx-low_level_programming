@@ -1,0 +1,3 @@
+import ctypes
+my_lib = ctypes.CDLL('./liball.so')
+my_lib.afunction()
